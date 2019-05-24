@@ -72,7 +72,7 @@ html {
 
 .home {
   margin-top: 7rem;
-  background: url("/img/home-small.jpg") fixed center no-repeat;
+  background: url("../img/home-small.jpg") fixed center no-repeat;
   height: 40vh;
   width: 100vw;
   display: flex;
