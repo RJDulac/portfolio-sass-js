@@ -8,7 +8,6 @@
   box-sizing: inherit; }
 
 html {
-  background-color: orange;
   box-sizing: border-box;
   font-size: 62.5%; }
 
@@ -17,18 +16,23 @@ html {
   background-color: #162955;
   list-style: none;
   opacity: 1;
+  width: 0;
+  height: 50%;
+  transition: all 0.2s; }
+
+.navigation__show {
+  width: 50%;
   padding: 7rem 6rem;
-  opacity: 0;
-  display: none; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .navigation__item {
   text-transform: uppercase;
-  font-size: 1.3rem;
-  padding-top: 1rem; }
-  .navigation__item:not(:first-child) {
-    padding-top: 4rem; }
+  font-size: 1.3rem; }
 
 .navigation__link {
+  cursor: pointer;
   text-decoration: none;
   color: #fff; }
 
@@ -57,6 +61,45 @@ html {
       transform: rotate(-135deg);
       transition: all 0.2s; }
 
-#icon:hover {
-  transform: scale(0.9);
-  transition: all 0.2s; }
+.header {
+  display: flex; }
+
+.brand {
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  font-size: 1.3rem; }
+
+.home {
+  margin-top: 7rem;
+  background: url("/img/home-small.jpg") fixed center no-repeat;
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .home__text {
+    color: #fff;
+    font-size: 2rem; }
+
+.about {
+  padding: 2rem; }
+  .about__text {
+    text-align: center;
+    columns: 2 0.3rem;
+    column-rule: 1px solid gray; }
+
+body {
+  height: 200rem; }
+
+@keyframes slide-in {
+  from {
+    transform: scaleX(0); }
+  to {
+    transform: scaleX(-1); } }
+
+@keyframes slide-out {
+  from {
+    transform: scaleX(-1); }
+  to {
+    transform: scaleX(0); } }
