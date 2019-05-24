@@ -1,0 +1,67 @@
+.navigation {
+  // display: flex;
+  // flex-direction: column;
+  // position: relative;
+  &__list {
+    position: fixed;
+    background-color: $color-primary-light;
+    list-style: none;
+    opacity: 1;
+    padding: 7rem 6rem;
+    //change properties with js
+    opacity: 0;
+    display: none;
+  }
+  &__item {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    &:not(:first-child) {
+      padding-top: 4rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+  &__icon {
+    z-index: 2;
+    position: fixed;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    //javascript toggles hamburger and close
+    &-line {
+      &-hamburger {
+        transition: all 0.2s;
+      }
+      &-close {
+        position: absolute;
+        padding: 1rem 1rem;
+        margin-top: 2.2rem;
+        top: 0;
+        left: 0;
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:first-child {
+          transform: rotate(135deg);
+          transition: all 0.2s;
+        }
+        &:last-child {
+          transform: rotate(-135deg);
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+}
+//not needed for mobile
+#icon:hover {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
