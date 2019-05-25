@@ -23,16 +23,16 @@
         </div>
         <ul class="navigation__list" id="menu">
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Home</a>
+            <a href="#home" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">About</a>
+            <a href="#about" class="navigation__link">About</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Projects</a>
+            <a href="#projects" class="navigation__link">Projects</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Skills</a>
+            <a href="#skills" class="navigation__link">Skills</a>
           </li>
         </ul>
       </nav>
@@ -44,15 +44,47 @@
           I love creating with technology!
         </p>
       </section>
-      <Section class="about">
+      <Section class="about" id="about">
         <p class="about__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
           magnam vitae vero. Doloribus similique rerum voluptas eaque nostrum
           sequi praesentium?
         </p>
       </Section>
-      <section class="projects"></section>
-      <section class="skills"></section>
+      <section class="projects" id="projects">
+        <div class="projects__card">
+          <h2 class="projects__card-title">
+            Omni was developed using X, Y, and Z
+          </h2>
+          <img
+            src="/img/omni-small.jpg"
+            alt="omni website"
+            class="projects__card-image"
+          />
+          <div class="projects__description">
+            <p class="projects__card-text">
+              View code on <span></span>
+              <a
+                href="https://github.com/RJDulac/omnifood"
+                target="_blank"
+                class="projects__card-link"
+                >Github</a
+              >
+            </p>
+            <p class="projects__card-text">
+              View site
+
+              <a
+                href="https://rjdulac.github.io/omnifood/"
+                target="_blank"
+                class="projects__card-link"
+                >live</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="skills" id="skills"></section>
     </main>
 
     <script src="js/main.js"></script>

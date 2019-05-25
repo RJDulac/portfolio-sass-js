@@ -9,7 +9,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 .navigation__list {
   position: fixed;
@@ -18,6 +19,7 @@ html {
   opacity: 1;
   width: 0;
   height: 50%;
+  z-index: -1;
   transition: all 0.2s; }
 
 .navigation__show {
@@ -25,11 +27,15 @@ html {
   padding: 7rem 6rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 1; }
 
 .navigation__item {
   text-transform: uppercase;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #4f628e; }
 
 .navigation__link {
   cursor: pointer;
@@ -88,6 +94,33 @@ html {
     text-align: center;
     columns: 2 0.3rem;
     column-rule: 1px solid gray; }
+
+.projects {
+  padding-top: 3rem; }
+  .projects__card-title {
+    padding: 2rem 0;
+    background-color: #4f628e;
+    border-top: 4px solid #2e4172;
+    border-bottom: 4px solid #2e4172;
+    text-align: center; }
+  .projects__card-image {
+    width: 100%; }
+  .projects__card-description {
+    display: flex;
+    flex-direction: column; }
+  .projects__card-text {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #4f628e;
+    border-top: 4px solid #2e4172; }
+    .projects__card-text:not(:first-child) {
+      border-bottom: 4px solid #2e4172; }
+  .projects__card-link {
+    text-decoration: none;
+    color: #551300;
+    border-bottom: solid 0.5px #551300;
+    font-weight: 600; }
 
 body {
   height: 200rem; }
