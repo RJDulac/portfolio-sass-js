@@ -1,4 +1,5 @@
 .navigation {
+  padding-bottom: 10rem;
   &__list {
     position: fixed;
     background-color: $color-primary-light;
@@ -6,8 +7,7 @@
     opacity: 1;
     width: 0;
     height: 50%;
-    //kept acting up
-    z-index: -1;
+    top: -8rem;
     transition: all 0.2s;
   }
   &__show {
@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    top: 0;
     z-index: 1;
   }
   &__item {
@@ -33,8 +34,9 @@
   &__icon {
     z-index: 2;
     position: fixed;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
+    //some issues when scrolling down
     padding: 1.5rem;
     margin-left: 1rem;
     cursor: pointer;
@@ -82,11 +84,15 @@
 }
 
 .home {
-  margin-top: 7rem;
+  // margin-top: 7rem;
   //darken image later
-  background: url("../img/home-small.jpg") fixed center no-repeat;
-  height: 40vh;
-  width: 100vw;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/home-small.jpg");
+  height: 20rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
